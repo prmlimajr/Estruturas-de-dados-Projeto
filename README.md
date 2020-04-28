@@ -5,7 +5,7 @@ Repositório para os códigos utilizados no projeto de avaliação da primeira n
 
 - [ ] __1 - Elaborar uma implementação para um tipo abstrato de dados que represente uma DATA (dia, mês e ano- DD/MM/AAAA). Garantir que as informações da data estejam coerentes, válidas. Implementar os seguintes operações:__
 
-  - [ ] Construtor (DD, MM, AAAA)
+  - [X] Construtor (DD, MM, AAAA)
   - [ ] toString() – retornando na forma de “DD/MM/AAAA” 
   - [ ] diasEntreDatas( Data outra): int
 
