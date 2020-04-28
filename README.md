@@ -3,11 +3,11 @@ Repositório para os códigos utilizados no projeto de avaliação da primeira n
 - - - - 
 # Projeto - Unidade 1 #
 
-- [ ] __1 - Elaborar uma implementação para um tipo abstrato de dados que represente uma DATA (dia, mês e ano- DD/MM/AAAA). Garantir que as informações da data estejam coerentes, válidas. Implementar os seguintes operações:__
+- [X] __1 - Elaborar uma implementação para um tipo abstrato de dados que represente uma DATA (dia, mês e ano- DD/MM/AAAA). Garantir que as informações da data estejam coerentes, válidas. Implementar os seguintes operações:__
 
   - [X] Construtor (DD, MM, AAAA)
-  - [ ] toString() – retornando na forma de “DD/MM/AAAA” 
-  - [ ] diasEntreDatas( Data outra): int
+  - [X] toString() – retornando na forma de “DD/MM/AAAA” 
+  - [X] diasEntreDatas( Data outra): int
 
 - - - - 
 - [ ] __2 - Complete as implementações de LISTA (vetor e dinâmica) vistas em aula. Implementar (em Lista_vetor e Lista_dinamica)  os seguintes métodos:__
