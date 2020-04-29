@@ -34,13 +34,13 @@ Repositório para os códigos utilizados no projeto de avaliação da primeira n
   
 - - - - 
 
-- [ ] __5 - Baseado em alguns dos métodos disponíveis na classe LinkedList (ver relação abaixo) do JAVA (java.util), implemente, em JAVA, uma classe FILA com os 05 (cinco) métodos de uma estrutura de FILA. Implemente também o método toString() para essa classe FILA, esse método deve retornar uma String com as informações da FILA em ordem:__
-  - [ ] void - entraFila(int elem) - Coloca um número inteiro no fim da fila.
-  - [ ] int - saiFila() - Remove e retorna o elemento (número inteiro) do início da fila.
-  - [ ] int - primeiroFila() - Retorna, sem remover, o elemento (número inteiro) do início da fila.
-  - [ ] boolean - underflow() - Retorna true se a fila estiver vazia e false caso contrário.
-  - [ ] boolean - overflow() - Retorna true se a fila estiver cheia e false caso contrário.
-  - [ ] String - toString() - Retorna uma String com a fila. Seus elementos serão separados por espaço, colocando os caracteres “<“ no início e “<” no fim. Ex: < 12 34 22 42 < 
+- [X] __5 - Baseado em alguns dos métodos disponíveis na classe LinkedList (ver relação abaixo) do JAVA (java.util), implemente, em JAVA, uma classe FILA com os 05 (cinco) métodos de uma estrutura de FILA. Implemente também o método toString() para essa classe FILA, esse método deve retornar uma String com as informações da FILA em ordem:__
+  - [X] void - entraFila(int elem) - Coloca um número inteiro no fim da fila.
+  - [X] int - saiFila() - Remove e retorna o elemento (número inteiro) do início da fila.
+  - [X] int - primeiroFila() - Retorna, sem remover, o elemento (número inteiro) do início da fila.
+  - [X] boolean - underflow() - Retorna true se a fila estiver vazia e false caso contrário.
+  - [X] boolean - overflow() - Retorna true se a fila estiver cheia e false caso contrário.
+  - [X] String - toString() - Retorna uma String com a fila. Seus elementos serão separados por espaço, colocando os caracteres “<“ no início e “<” no fim. Ex: < 12 34 22 42 < 
 
 ### LinkedList - Method Summary ###
   - __void - addFirst(E o) - Inserts the given element at the beginning of this list.__
