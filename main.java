@@ -1,10 +1,13 @@
+import java.util.Scanner;
+
 public class main {
 
 	public static void main(String[] args) {
 
+		System.out.println("===================================================");
 		System.out.println("QUESTÃO 01");
-		System.out.println();
-		
+		System.out.println("===================================================");
+				
 		Data d = new Data(28,04,2019);
 		Data e = new Data (28,04,2020);
 		
@@ -14,15 +17,12 @@ public class main {
 		System.out.println("Data 1 é ano bissexto? " + d.bissexto(d.getAAAA()));
 		System.out.println("Data 2 é ano bissexto? " + e.bissexto(e.getAAAA()));
 		
-		System.out.println();
+	
 		System.out.println("===================================================");
-		System.out.println();
-		
 		System.out.println("QUESTÃO 02");
-		System.out.println();
+		System.out.println("===================================================");
 		
 		System.out.println("Lista_vetor");
-		System.out.println();
 		Lista_vetor l = new Lista_vetor();
 		
 		l.add(0, 1);
@@ -38,11 +38,10 @@ public class main {
 		System.out.println("Método toString após o remove: " + l);
 		System.out.println("Método set na posição 2. Valor que sofreu alteração: " + l.set(2, 8));
 		System.out.println("Método toString após o set: " + l);
-		
-		System.out.println();
+
+		System.out.println("===================================================");
 		
 		System.out.println("Lista_dinamica");
-		System.out.println();
 		Lista_dinamica ld = new Lista_dinamica();
 		
 		ld.add(0, 1);
@@ -53,11 +52,179 @@ public class main {
 		
 		System.out.println("Método toString: " + ld);
 		System.out.println("Método Média: " + ld.media());
-		System.out.println("Método get na posição 2: " + ld.get(2)); 		// CONSERTAR O GET 
-		System.out.println("Método remove na posição 2. Valor removido: " + ld.remove(2)); 		// ESTÁ RETORNANDO O VALOR CORRETO MAS ESTÁ REMOVENDO O ÚLTIMO ÍNDICE
+		System.out.println("Método get na posição 2: " + ld.get(2)); 		
+		System.out.println("Método remove na posição 2. Valor removido: " + ld.remove(2));
 		System.out.println("Método toString após o remove: " + ld);
 		System.out.println("Método set na posição 2. Valor que sofreu alteração: " + ld.set(2, 8));
 		System.out.println("Método toString após o set: " + ld);
+		
+		System.out.println("===================================================");
+		System.out.println("QUESTÃO 03");
+		System.out.println("===================================================");
+		
+		System.out.println("Pilha_vetor");
+		Pilha_vetor pv = new Pilha_vetor(5);
+						
+		System.out.println("Underflow? " + pv.underflow());
+		System.out.println("Overflow? " + pv.overflow());
+				
+		pv.push('P');
+		pv.push('i');
+		pv.push('l');
+		pv.push('h');
+		pv.push('a');
+		pv.exibe();
+		
+		System.out.println("Underflow? " + pv.underflow());
+		System.out.println("Overflow? " + pv.overflow());
+				
+		System.out.println("Topo da pilha: " + pv.top());
+		pv.pop();
+		System.out.println("Topo da pilha depois do pop: " + pv.top());
+		pv.exibe();
+		
+		System.out.println("===================================================");
+		
+		System.out.println("Pilha_dinamica");
+		Pilha_dinamica pd = new Pilha_dinamica(5);
+		
+		System.out.println("Underflow? " + pd.underflow());
+		System.out.println("Overflow? " + pd.overflow());
+		
+		pd.push('P');
+		pd.push('i');
+		pd.push('l');
+		pd.push('h');
+		pd.push('a');
+		pd.exibe();
+		
+		System.out.println("Underflow? " + pd.underflow());
+		System.out.println("Overflow? " + pd.overflow());
+		
+		System.out.println("Topo da pilha: " + pd.top());
+		
+		pd.pop();
+		
+		System.out.println("Topo da pilha depois do pop: " + pd.top());
+		pd.exibe();
+		
+		System.out.println("===================================================");
+		
+		System.out.println("Pilha LinkedList");
+		Pilha_LinkedList pl = new Pilha_LinkedList(5);
+		
+		System.out.println("Underflow? " + pl.underflow());
+		System.out.println("Overflow? " + pl.overflow());
+		
+		pl.push('P');
+		pl.push('i');
+		pl.push('l');
+		pl.push('h');
+		pl.push('a');
+		pl.exibe();
+		
+		System.out.println("Underflow? " + pl.underflow());
+		System.out.println("Overflow? " + pl.overflow());
+		
+		System.out.println("Topo da pilha: " + pl.top());
+		
+		pl.pop();
+		
+		System.out.println("Topo da pilha depois do pop: " + pl.top());
+		pl.exibe();
+		
+		System.out.println("===================================================");
+		System.out.println("QUESTÃO 04");
+		System.out.println("===================================================");
+		
+		Scanner scan = new Scanner(System.in);
+		
+		System.out.println("Pilha_vetor");
+		Pilha_vetor s = new Pilha_vetor();
+		
+		System.out.println("Digite a espressão matemática: ");
+		String exp = scan.nextLine();
+		
+		for(int i = 0; i < exp.length(); i++) {
+			if (exp.charAt(i) == '(') {
+				s.push(exp.charAt(i));
+			}
+			
+		}
+		System.out.println("Pilha antes do pop.");
+		s.exibe();
+		
+		for(int i = 0; i < exp.length(); i++) {
+			if (exp.charAt(i) == ')') {
+				if (!s.underflow()) {
+					s.pop();	
+				} else {
+					System.out.println("A pilha está vazia. Não é possível remover nenhum elemento.");
+				}
+			}
+		}
+		System.out.println("Pilha depois do pop.");
+		s.exibe();
+		
+		System.out.println("===================================================");
+		
+		System.out.println("Pilha_dinamica");
+		Pilha_dinamica t = new Pilha_dinamica();
+		
+		System.out.println("Digite a espressão matemática: ");
+		String expT = scan.nextLine();
+		
+		for(int i = 0; i < expT.length(); i++) {
+			if (expT.charAt(i) == '(') {
+				t.push(expT.charAt(i));
+			}
+			
+		}
+		System.out.println("Pilha antes do pop.");
+		t.exibe();
+		
+		for(int i = 0; i < expT.length(); i++) {
+			if (expT.charAt(i) == ')') {
+				if (!t.underflow()) {
+					t.pop();	
+				} else {
+					System.out.println("A pilha está vazia. Não é possível remover nenhum elemento.");
+				}
+			}
+		}
+		System.out.println("Pilha depois do pop.");
+		t.exibe();
+		
+		System.out.println("===================================================");
+		
+		System.out.println("Pilha_LinkedList");
+		Pilha_LinkedList u = new Pilha_LinkedList();
+		
+		System.out.println("Digite a espressão matemática: ");
+		String expU = scan.nextLine();
+		
+		for(int i = 0; i < expU.length(); i++) {
+			if (expU.charAt(i) == '(') {
+				u.push(expU.charAt(i));
+			}
+			
+		}
+		System.out.println("Pilha antes do pop.");
+		u.exibe();
+		
+		for(int i = 0; i < expU.length(); i++) {
+			if (expU.charAt(i) == ')') {
+				if (!u.underflow()) {
+					u.pop();	
+				} else {
+					System.out.println("A pilha está vazia. Não é possível remover nenhum elemento.");
+				}
+			}
+		}
+		System.out.println("Pilha depois do pop.");
+		u.exibe();
 	}
+	
+				
 
 }
