@@ -121,7 +121,7 @@ public class main {
 		pl.push('l');
 		pl.push('h');
 		pl.push('a');
-		pl.exibe();
+		System.out.println(pl);
 		
 		System.out.println("Underflow? " + pl.underflow());
 		System.out.println("Overflow? " + pl.overflow());
@@ -131,7 +131,7 @@ public class main {
 		pl.pop();
 		
 		System.out.println("Topo da pilha depois do pop: " + pl.top());
-		pl.exibe();
+		System.out.println(pl);
 		
 		System.out.println("===================================================");
 		System.out.println("QUESTÃO 04");
@@ -210,7 +210,7 @@ public class main {
 			
 		}
 		System.out.println("Pilha antes do pop.");
-		u.exibe();
+		System.out.println(u);
 		
 		for(int i = 0; i < expU.length(); i++) {
 			if (expU.charAt(i) == ')') {
@@ -222,9 +222,33 @@ public class main {
 			}
 		}
 		System.out.println("Pilha depois do pop.");
-		u.exibe();
+		System.out.println(u);
+		
+		System.out.println("===================================================");
+		System.out.println("QUESTÃO 05");
+		System.out.println("===================================================");
+		
+		System.out.println("Fila_LinkedList");
+		Fila_LinkedList f = new Fila_LinkedList(5);
+		
+		System.out.println("Fila vazia? " + f.underflow());
+		System.out.println("Fila cheia? " + f.overflow());
+		
+		f.entraFila(1);
+		f.entraFila(2);
+		f.entraFila(3);
+		f.entraFila(4);
+		f.entraFila(5);
+		f.entraFila(6);
+		
+		System.out.println("Fila vazia? " + f.underflow());
+		System.out.println("Fila cheia? " + f.overflow());
+		
+		System.out.println(f);
+		
+		f.saiFila();
+		System.out.println(f);
+		
 	}
-	
-				
 
 }
