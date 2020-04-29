@@ -20,13 +20,13 @@ Repositório para os códigos utilizados no projeto de avaliação da primeira n
 
 - - - - 
 
-- [ ] __3 - Com base nas implementações de Listas, implemente (usando vetor, ponteiro e LinkedList - ver relação abaixo) uma pilha de caractere (char) com as operações de Pilha:__
+- [X] __3 - Com base nas implementações de Listas, implemente (usando vetor, ponteiro e LinkedList - ver relação abaixo) uma pilha de caractere (char) com as operações de Pilha:__
   
-  - [ ] Push
-  - [ ] Pop
-  - [ ] Top
-  - [ ] Underflow – Pilha vazia
-  - [ ] Overflow – Pilha cheia 
+  - [X] Push
+  - [X] Pop
+  - [X] Top
+  - [X] Underflow – Pilha vazia
+  - [X] Overflow – Pilha cheia 
 
 - - - - 
 
