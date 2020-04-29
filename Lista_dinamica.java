@@ -150,28 +150,27 @@ public class Lista_dinamica {
     
     public double remove( int index ) {
 		if((index >= 0) && (index <= size())){
-			double removed = 0;
 			if(index == 0) {
-				removeFirst();
+				return removeFirst();
 			} else if(index == size()) {
-				removeLast();
+				return removeLast();
 			} else {
+				double removed;
 				No aux = ini;
-				for(int j = 0; j < index; j++) {
+				for(int j = 0; j < index-1; j++) {
+					System.out.println("Chega indice "+j);
 					aux = aux.prox;
 				}
-				No newNode = new No (aux.prox.info, aux.prox);
-				aux.prox = newNode;
-				removed = aux.info;
+				removed = aux.prox.info;
+				aux.prox = aux.prox.prox;				
 				tam--;
 				return removed;
 			}
-			return removed;
 		} else {
 			System.out.println("Posição não consta na lista.");
 			return 0;
 		}
-    }	
+    }
     
 	public String toString() {
 		No aux = ini;
