@@ -12,11 +12,11 @@ Repositório para os códigos utilizados no projeto de avaliação da primeira n
 - - - - 
 - [ ] __2 - Complete as implementações de LISTA (vetor e dinâmica) vistas em aula. Implementar (em Lista_vetor e Lista_dinamica)  os seguintes métodos:__
 
-  - [ ] double  - get(int i)
+  - [X] double  - get(int i)
   - [ ] double  - remove(int i)
-  - [ ] double  - set(int i, double v) - Retorna o valor que estava na posição antes de ser alterado.
-  - [ ] double  - media() - Retorna a média dos valores da Lista.
-  - [ ] String  - toString() - Retorna uma String com a Lista. Seus elementos serão separados por espaço, colocando os caracteres “[“ no início e “]” no fim. Ex: [ 12 34 22 42 ]
+  - [X] double  - set(int i, double v) - Retorna o valor que estava na posição antes de ser alterado.
+  - [X] double  - media() - Retorna a média dos valores da Lista.
+  - [X] String  - toString() - Retorna uma String com a Lista. Seus elementos serão separados por espaço, colocando os caracteres “[“ no início e “]” no fim. Ex: [ 12 34 22 42 ]
 
 - - - - 
 
