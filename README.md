@@ -30,7 +30,7 @@ Repositório para os códigos utilizados no projeto de avaliação da primeira n
 
 - - - - 
 
-- [ ] __4 - Usando as implementações do exercício anterior, faça: Um programa para ler uma expressão aritmética na forma de uma cadeia de caractere ( Ex: “(a+b*(2/3)-((2*3)+5))” ). Verificar de os parênteses dessa expressão estão corretos, ou seja se para cada ‘(’ teremos uma ‘)’. Usar uma pilha para colocar ‘(’ toda vez que encontrar um ‘(’ na expressão e remover da pilha o elemento do topo toda vez que encontrar um ‘)’  na expressão. Durante a análise não deve haver operação de POP em situação de UNDERFLOW. No final da análise a pilha deverá estar VAZIA.__
+- [X] __4 - Usando as implementações do exercício anterior, faça: Um programa para ler uma expressão aritmética na forma de uma cadeia de caractere ( Ex: “(a+b*(2/3)-((2*3)+5))” ). Verificar de os parênteses dessa expressão estão corretos, ou seja se para cada ‘(’ teremos uma ‘)’. Usar uma pilha para colocar ‘(’ toda vez que encontrar um ‘(’ na expressão e remover da pilha o elemento do topo toda vez que encontrar um ‘)’  na expressão. Durante a análise não deve haver operação de POP em situação de UNDERFLOW. No final da análise a pilha deverá estar VAZIA.__
   
 - - - - 
 
