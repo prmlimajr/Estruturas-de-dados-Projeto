@@ -79,7 +79,7 @@ public class Lista_vetor {
 	
 	public double removeLast() {
 		if (livre != 0) {
-			double removed = vet[livre];
+			double removed = vet[livre -1];
 			livre--;
 			return removed;
 		} else {
