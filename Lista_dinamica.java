@@ -113,12 +113,16 @@ public class Lista_dinamica {
 				cont++;
 			}
 			return aux.info;
-		} else {
+		}
+    	else if (size() == 0) {
+    		System.out.println("Lista vazia!");
+    		return 0;
+    	}
+    	else {
 			System.out.println("Elemento não conta na lista!");
 			return 0;
         }
     }
-    
     public double removeFirst(){
     	if(size() != 0){
     		double removed = ini.info;
@@ -175,7 +179,7 @@ public class Lista_dinamica {
 	public String toString() {
 		No aux = ini;
 		String lista;
-		lista = "[";
+		lista = "Lista Dinamica[";
 		for(int i = 0; i < size(); i++) {
 			lista += aux.info + " ";
 			aux = aux.prox;
@@ -185,15 +189,21 @@ public class Lista_dinamica {
 	}
 	
 	public double media() {
-		double soma = 0;
-		double media = 0;
-		No aux = ini;
-		for(int i = 0; i < size(); i++) {
-			soma += aux.info;
-			aux = aux.prox;
+		if(size() != 0) {
+			double soma = 0;
+			double media = 0;
+			No aux = ini;
+			for(int i = 0; i < size(); i++) {
+				soma += aux.info;
+				aux = aux.prox;
+			}
+			media = soma / size();
+			return media;
 		}
-		media = soma / size();
-		return media;
+		else {
+			System.out.println("Impossível calcular média, lista vazia!");
+			return 0;
+		}
 	}
 	
 	public void printSecond(){
