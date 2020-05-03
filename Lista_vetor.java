@@ -133,7 +133,7 @@ public class Lista_vetor {
 	
 	public String toString() {
 		String lista;
-		lista = "[ ";
+		lista = "Lista Vetor => [ ";
 		for (int i = 0; i < livre; i++) {
 			lista += vet[i] + " ";
 		}
@@ -142,12 +142,17 @@ public class Lista_vetor {
 	}
 
 	public double media() {
-		double soma = 0;
-		double media = 0;
-		for(int i = 0; i < livre; i++) {
-			soma += vet[i];
+		if(size() != 0) {
+			double soma = 0;
+			double media = 0;
+			for(int i = 0; i < livre; i++) {
+				soma += vet[i];
+			}
+			media = soma / livre;
+			return media;
 		}
-		media = soma / livre;
-		return media;
+		else {
+			System.out.println("Impossível calcular média, lista vazia!");
+			return 0;
+		}
 	}
-}
