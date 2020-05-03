@@ -53,12 +53,16 @@ public class Lista_vetor {
 	public double get(int i) {
 		if (i >= 0 && i < livre) {
 			return vet[i];
-		} else {
+		}
+		else if(livre == 0) {
+			System.out.println("A lista está vazia!");
+			return 0;
+		}
+		else {
 			System.out.println("Elemento não consta na lista.");
 			return 0;
 		}
 	}
-	
 	public double getLast() {
 		if(livre > 0) {
 			return vet[livre-1];
