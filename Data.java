@@ -6,8 +6,8 @@ public class Data {
 	private boolean bissexto;
 	
 	public Data(int DD, int MM, int AAAA) {
-		this.setDD(DD);
 		this.setMM(MM);
+		this.setDD(DD);
 		this.setAAAA(AAAA);
 	}
 	
