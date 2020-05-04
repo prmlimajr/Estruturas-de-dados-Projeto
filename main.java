@@ -166,6 +166,10 @@ public class main {
 		System.out.println("Pilha depois do pop.");
 		s.exibe();
 		
+		if(!s.underflow()) {
+			System.out.println("Há erro na expressão.");
+		}
+		
 		System.out.println("===================================================");
 		
 		System.out.println("Pilha_dinamica");
@@ -195,6 +199,10 @@ public class main {
 		System.out.println("Pilha depois do pop.");
 		t.exibe();
 		
+		if(!t.underflow()) {
+			System.out.println("Há erro na expressão.");
+		}
+		
 		System.out.println("===================================================");
 		
 		System.out.println("Pilha_LinkedList");
@@ -223,6 +231,10 @@ public class main {
 		}
 		System.out.println("Pilha depois do pop.");
 		System.out.println(u);
+		
+		if(!u.underflow()) {
+			System.out.println("Há erro na expressão.");
+		}
 		
 		System.out.println("===================================================");
 		System.out.println("QUESTÃO 05");
