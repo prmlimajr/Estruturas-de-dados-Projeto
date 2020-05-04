@@ -8,7 +8,7 @@ public class main {
 		System.out.println("QUESTÃO 01");
 		System.out.println("===================================================");
 				
-		Data d = new Data(28,04,2019);
+		Data d = new Data(31,12,2019);
 		Data e = new Data (28,04,2020);
 		
 		System.out.println("data 1 - toString(): " + d);
@@ -138,6 +138,7 @@ public class main {
 		System.out.println("===================================================");
 		
 		Scanner scan = new Scanner(System.in);
+		int count = 0;
 		
 		System.out.println("Pilha_vetor");
 		Pilha_vetor s = new Pilha_vetor();
@@ -156,9 +157,11 @@ public class main {
 		
 		for(int i = 0; i < exp.length(); i++) {
 			if (exp.charAt(i) == ')') {
+				count++;
 				if (!s.underflow()) {
+					count--;
 					s.pop();	
-				} else {
+				}  else {
 					System.out.println("A pilha está vazia. Não é possível remover nenhum elemento.");
 				}
 			}
@@ -166,14 +169,17 @@ public class main {
 		System.out.println("Pilha depois do pop.");
 		s.exibe();
 		
-		if(!s.underflow()) {
+		if(!s.underflow() || count != 0) {
 			System.out.println("Há erro na expressão.");
+		} else {
+			System.out.println("A expressão está correta.");
 		}
 		
 		System.out.println("===================================================");
 		
 		System.out.println("Pilha_dinamica");
 		Pilha_dinamica t = new Pilha_dinamica();
+		count = 0;
 		
 		System.out.println("Digite a espressão matemática: ");
 		String expT = scan.nextLine();
@@ -189,7 +195,9 @@ public class main {
 		
 		for(int i = 0; i < expT.length(); i++) {
 			if (expT.charAt(i) == ')') {
+				count++;
 				if (!t.underflow()) {
+					count--;
 					t.pop();	
 				} else {
 					System.out.println("A pilha está vazia. Não é possível remover nenhum elemento.");
@@ -199,14 +207,17 @@ public class main {
 		System.out.println("Pilha depois do pop.");
 		t.exibe();
 		
-		if(!t.underflow()) {
+		if(!t.underflow() || count != 0) {
 			System.out.println("Há erro na expressão.");
+		} else {
+			System.out.println("A expressão está correta.");
 		}
 		
 		System.out.println("===================================================");
 		
 		System.out.println("Pilha_LinkedList");
 		Pilha_LinkedList u = new Pilha_LinkedList();
+		count = 0;
 		
 		System.out.println("Digite a espressão matemática: ");
 		String expU = scan.nextLine();
@@ -222,7 +233,9 @@ public class main {
 		
 		for(int i = 0; i < expU.length(); i++) {
 			if (expU.charAt(i) == ')') {
+				count++;
 				if (!u.underflow()) {
+					count--;
 					u.pop();	
 				} else {
 					System.out.println("A pilha está vazia. Não é possível remover nenhum elemento.");
@@ -232,8 +245,10 @@ public class main {
 		System.out.println("Pilha depois do pop.");
 		System.out.println(u);
 		
-		if(!u.underflow()) {
+		if(!u.underflow() || count != 0) {
 			System.out.println("Há erro na expressão.");
+		} else {
+			System.out.println("A expressão está correta.");
 		}
 		
 		System.out.println("===================================================");
